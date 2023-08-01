@@ -1,9 +1,11 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <form action="">
+            <form action="{{ route('application.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
                 <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
                     <h1 class="font-bold text-xl text-dark-800 leading-tight mb-4">
-                        Habar qoldiring
+                        Leave a message
                     </h1>
                     <div class="-mx-3 md:flex mb-6">
                         <div class="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -40,7 +42,8 @@
                     </div>
                     <div class="-mx-3 md:flex mb-2">
                         <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                            <button type="submit"
+                                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                                 Send
                             </button>
                         </div>
